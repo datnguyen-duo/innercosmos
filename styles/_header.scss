@@ -1,0 +1,36 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+
+    img {
+        width: 100%;
+        vertical-align: bottom;
+        position: relative;
+        z-index: 0;
+    }
+
+    .logo {
+        position: absolute;
+        top: 0.8vw;
+        left: 1.1vw;
+        width: 5.5vw;
+        height: 1.8vw;
+        z-index: 1;
+        cursor: pointer;
+        //background-color: rgba(red,30%);
+    }
+
+    .popup-button {
+        position: absolute;
+        top: 0.8vw;
+        right: 1.6vw;
+        width: 8.6vw;
+        height: 2vw;
+        z-index: 1;
+        cursor: pointer;
+        //background-color: rgba(red,30%);
+    }
+}
