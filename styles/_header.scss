@@ -12,6 +12,7 @@ header {
         vertical-align: bottom;
         position: relative;
         z-index: 0;
+        border-bottom: solid 3px #ffe8b9;
 
         &.mobile {
             @media #{$mobile-xl} {
