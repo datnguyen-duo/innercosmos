@@ -285,7 +285,8 @@
         <?php if( $members_s_3['title'] || $members_s_3['members'] ): ?>
         <section class="members-section team-section">
             <h2 class="title">The team</h2>
-
+            <p class="description">United their full-spectrum expertise to build the first neuromedicine-<br>
+            The Digital Pill</p>
             <?php if( $members_s_3['members'] ): ?>
                 <div class="members">
                     <?php foreach( $members_s_3['members'] as $post ): setup_postdata($post); ?>
@@ -324,14 +325,14 @@
                 <h2 class="title"><?= $contact_s['title'] ?></h2>
             <?php endif; ?>
 
-            <?php if( $contact_s['title'] ): ?>
-                <h2 class="subtitle"><?= $contact_s['subtitle'] ?></h2>
-            <?php endif; ?>
-
             <?php if( $contact_s['form_shortcode'] ): ?>
                 <div class="form-holder">
                     <?= do_shortcode($contact_s['form_shortcode']) ?>
                 </div>
+            <?php endif; ?>
+
+            <?php if( $contact_s['subtitle'] ): ?>
+                <h2 class="subtitle"><?= $contact_s['subtitle'] ?></h2>
             <?php endif; ?>
         </section>
     <?php endif; ?>

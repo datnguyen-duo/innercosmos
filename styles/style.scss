@@ -200,7 +200,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   color: #000d2d;
-
+  overflow-x: hidden;
   * {
     font-weight: normal;
   }
@@ -550,6 +550,10 @@ body {
       }
     }
   }
+}
+
+.grecaptcha-badge {
+  display: none;
 }
 
 @import "reset";

@@ -16,7 +16,7 @@
             <img class="mobile" src="<?= get_template_directory_uri() ?>/images/mobile-header.png" alt="">
             <img class="tablet" src="<?=get_template_directory_uri() ?>/images/tablet-header.png" alt="">
             <img class="desktop" src="<?= get_template_directory_uri() ?>/images/header.png" alt="">
-            <a href="<?= site_url() ?>" class="logo"></a>
+            <a href="<?= site_url() ?>/#" class="logo"></a>
             <div class="popup-button"></div>
         </header>
 

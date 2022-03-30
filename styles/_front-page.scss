@@ -1,15 +1,25 @@
 .front-page-container {
   .hero-section {
+    overflow: hidden;
     background-color: #b4b8c7;
     //min-height: 100vh;
     position: relative;
     padding: 9.69vw 20px 13.48vw;
     box-sizing: border-box;
-
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     .background {
       @include cropped-img();
       object-fit: contain;
       z-index: 0;
+
+      @media screen and (max-width: 550px) {
+        min-width: 150vw;
+        transform: translateX(-50%);
+        left: 50%;
+      }
     }
 
     .section-content {
@@ -19,28 +29,39 @@
       .title {
         @include title-0();
         //margin-bottom: 80px;
-        margin-bottom: 4.04vw;
+        margin-bottom: 8vw;
+
+        @media #{$mobile-l} {
+          margin-bottom: 6vw;
+        }
       }
 
       .description {
         margin: auto;
 
         @media #{$tablet-s} {
-          max-width: 64.64vw;
+          max-width: 50vw;
         }
 
         p {
-          @include font-light();
-          font-size: 20px;
+          @include title_2();
           color: #fff;
-
-          @media #{$tablet-s} {
-            font-size: 3vw;
+          &:nth-child(1) {
+            @include title_3();
           }
-
-          @media #{$tablet-l} {
-            font-size: 2.22vw;
+          &:nth-child(3) {
+            @include input-text();
           }
+          span {
+            color: #fff;
+          }
+          // @media #{$tablet-s} {
+          //   font-size: 3vw;
+          // }
+
+          // @media #{$tablet-l} {
+          //   font-size: 2.22vw;
+          // }
         }
       }
     }
@@ -64,7 +85,8 @@
 
       .title {
         @include subtitle();
-        color: #e57185;
+        color: #f5a67e;
+        margin-bottom: 1em;
       }
 
       .description {
@@ -76,7 +98,7 @@
           }
           &:nth-child(5) {
             @include input-text();
-            color: #e57185;
+            color: #f5a67e;
           }
         }
       }
@@ -132,7 +154,7 @@
           width: 225px;
 
           @media #{$mobile-xl} {
-            padding-right: 100px;
+            width: 100%;
           }
         }
 
@@ -471,6 +493,16 @@
               @media #{$tablet-xs} {
                 width: 50%;
               }
+
+              &:nth-child(2) {
+                order: 3;
+              }
+              &:nth-child(3) {
+                order: 2;
+              }
+              &:nth-child(4) {
+                order: 4;
+              }
             }
           }
         }
@@ -518,20 +550,7 @@
               margin-top: 50px;
               padding: 0 6vw;
               p {
-                @include font-light();
-                font-size: 22px;
-
-                //@media #{$tablet-s} {
-                //}
-                //
-                //@media #{$tablet-l} {
-                //    font-size: 22px;
-                //}
-
-                @media #{$laptop-s} {
-                  font-size: 1.51vw;
-                  //font-size: 30px;
-                }
+                @include title-3();
               }
             }
           }
@@ -641,6 +660,26 @@
                 width: 25%;
               }
 
+              &:nth-child(1) {
+                order: 1;
+              }
+
+              &:nth-child(2) {
+                order: 6;
+              }
+              &:nth-child(3) {
+                order: 2;
+              }
+              &:nth-child(4) {
+                order: 4;
+              }
+              &:nth-child(5) {
+                order: 5;
+              }
+              &:nth-child(6) {
+                order: 3;
+              }
+
               .member-logo-container {
                 .member-logo {
                   height: 170px;
@@ -667,6 +706,25 @@
 
           @media #{$tablet-l} {
             margin-bottom: 2.52vw;
+          }
+        }
+
+        > .description {
+          @include font-light();
+          font-size: 22px;
+          text-align: center;
+          margin: 1em 0;
+
+          //@media #{$tablet-s} {
+          //}
+          //
+          //@media #{$tablet-l} {
+          //    font-size: 22px;
+          //}
+
+          @media #{$laptop-s} {
+            font-size: 1.51vw;
+            //font-size: 30px;
           }
         }
 
@@ -757,6 +815,7 @@
     .subtitle {
       @include subtitle();
       text-align: center;
+      margin-top: 2em;
       a {
         color: inherit;
         text-decoration: underline;
