@@ -186,7 +186,8 @@
         </section>
         <?php endif; ?>
 
-        <?php if(
+        <?php
+        if(
                 $members_s_2['member_1'] ||
                 $members_s_2['member_2'] ||
                 $members_s_2['member_3'] ||
@@ -246,6 +247,7 @@
             <!--Desktop members END-->
 
             <!--Mobile members-->
+            <?php $members_order = ['member_2','member_1','member_3','member_5','member_4','member_6']; ?>
             <div class="mobile-members">
                 <?php if( $members_s_2['title'] || $members_s_2['description'] ): ?>
                     <div class="title-holder">
@@ -260,7 +262,7 @@
                 <?php endif; ?>
 
                 <div class="members">
-                    <?php for( $i=1; $i<6; $i++ ): $member_index = 'member_'.$i; ?>
+                    <?php for( $i=0; $i<sizeof($members_order); $i++ ): $member_index = $members_order[$i]; ?>
                         <div class="member-holder">
                             <?php if( $members_s_2[$member_index] ):
                                 $member = new WP_Query(array(
