@@ -715,22 +715,24 @@
           }
         }
 
-        > .description {
-          @include font-light();
-          font-size: 22px;
-          text-align: center;
-          margin: 1em 0;
+        .description {
+          p {
+            @include font-light();
+            font-size: 22px;
+            text-align: center;
+            margin: 1em 0;
 
-          //@media #{$tablet-s} {
-          //}
-          //
-          //@media #{$tablet-l} {
-          //    font-size: 22px;
-          //}
+            //@media #{$tablet-s} {
+            //}
+            //
+            //@media #{$tablet-l} {
+            //    font-size: 22px;
+            //}
 
-          @media #{$laptop-s} {
-            font-size: 1.51vw;
-            //font-size: 30px;
+            @media #{$laptop-s} {
+              font-size: 1.51vw;
+              //font-size: 30px;
+            }
           }
         }
 

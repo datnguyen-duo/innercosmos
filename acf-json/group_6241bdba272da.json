@@ -831,6 +831,25 @@
                     "new_lines": "br"
                 },
                 {
+                    "key": "field_6244764ca7c45",
+                    "label": "Description",
+                    "name": "description",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "basic",
+                    "media_upload": 0,
+                    "delay": 0
+                },
+                {
                     "key": "field_6241c961d2ec4",
                     "label": "Members",
                     "name": "members",
@@ -1058,5 +1077,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1648581188
+    "modified": 1648653917
 }
