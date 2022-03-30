@@ -164,8 +164,14 @@
           }
 
           p {
-            @include text_1();
+            @include font-book();
+            font-size: 18px;
+            line-height: 1.3em;
             margin-bottom: 20px;
+
+            @media #{$laptop-s} {
+              font-size: 1.3vw;
+            }
 
             &:last-child {
               margin-bottom: 0;
