@@ -4,12 +4,29 @@
     background-color: #b4b8c7;
     //min-height: 100vh;
     position: relative;
-    padding: 9.69vw 20px 13.48vw;
+    padding: 8vw 20px 13.48vw;
     box-sizing: border-box;
     min-height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 11.5vw;
+      z-index: 1;
+      width: 100%;
+      background: #ffe8b9;
+
+      @media #{$mobile-xl} {
+        height: 8.2vw;
+      }
+      @media #{$tablet-xl} {
+        height: 3.5vw;
+      }
+    }
     .background {
       @include cropped-img();
       object-fit: contain;
