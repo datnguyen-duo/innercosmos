@@ -48,7 +48,7 @@ header {
         height: 7vw;
         z-index: 1;
         cursor: pointer;
-        background-color: rgba(red,30%);
+        //background-color: rgba(red,30%);
 
         @media #{$mobile-xl} {
             top: 1.9vw;
@@ -69,7 +69,7 @@ header {
         position: absolute;
         z-index: 1;
         cursor: pointer;
-        background-color: rgba(red,30%);
+        //background-color: rgba(red,30%);
         top: 2.2vw;
         right: 1.6vw;
         width: 22vw;
