@@ -164,8 +164,8 @@
 
                 <?php if( $members_s_1['members_1'] || $members_s_1['members_2'] ): ?>
                     <div class="members">
-                        <?php if( $members_s_1['members_2'] ):
-                            foreach( $members_s_1['members_2'] as $post ): setup_postdata($post); ?>
+                        <?php if( $members_s_1['members_1'] ):
+                            foreach( $members_s_1['members_1'] as $post ): setup_postdata($post); ?>
                                 <div class="member-holder">
                                     <?php get_template_part('template-parts/member'); ?>
                                 </div>
