@@ -28,7 +28,6 @@
                         <?php if( $popup['title'] ): ?>
                             <h2 class="title"><?= $popup['title'] ?></h2>
                         <?php endif; ?>
-
                         <div class="description">
                             <?php if( $popup['description'] ): ?>
                                 <p><?= $popup['description'] ?></p>
@@ -40,6 +39,7 @@
                                 <?= do_shortcode($popup['form_shortcode']) ?>
                             </div>
                         <?php endif; ?>
+                        <img class="icon" src="<?php echo get_bloginfo('template_url') ?>/images/IC_favicon.png" alt="IC-icon">
                     </div>
                 </div>
             </div>

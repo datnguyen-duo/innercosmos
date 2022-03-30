@@ -526,7 +526,7 @@ body {
         margin-top: 40px;
 
         @media #{$tablet-s} {
-          margin: 6.56vw auto 0;
+          margin: 4vw auto 0;
           max-width: 29vw;
         }
 
@@ -542,6 +542,11 @@ body {
         .wpcf7-response-output {
           color: #000d2d;
         }
+      }
+
+      .icon {
+        display: block;
+        margin: 1em auto 0;
       }
     }
   }

@@ -69,7 +69,15 @@
 
       .description {
         p {
-          @include title-2();
+          @include title_2();
+
+          &:nth-child(3) {
+            @include title_3();
+          }
+          &:nth-child(5) {
+            @include input-text();
+            color: #e57185;
+          }
         }
       }
     }
@@ -401,7 +409,7 @@
               max-width: 33.98vw;
 
               p {
-                @include text_2();
+                @include title-3();
               }
             }
 
@@ -502,9 +510,9 @@
 
             .description {
               margin-top: 50px;
-
+              padding: 0 6vw;
               p {
-                @include text_2();
+                @include title-3();
               }
             }
           }
@@ -612,6 +620,12 @@
 
               @media #{$tablet-l} {
                 width: 25%;
+              }
+
+              .member-logo-container {
+                .member-logo {
+                  height: 170px;
+                }
               }
             }
           }
