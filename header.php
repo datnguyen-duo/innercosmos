@@ -30,8 +30,9 @@
                         <?php endif; ?>
 
                         <div class="description">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br>
-                                Mauris blandit eros diam, sed laoreet libero rutrum eu.</p>
+                            <?php if( $popup['description'] ): ?>
+                                <p><?= $popup['description'] ?></p>
+                            <?php endif; ?>
                         </div>
 
                         <?php if( $popup['form_shortcode'] ): ?>

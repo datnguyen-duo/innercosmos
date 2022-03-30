@@ -56,7 +56,7 @@
                     "key": "field_6241bf9d1d667",
                     "label": "Description",
                     "name": "description",
-                    "type": "wysiwyg",
+                    "type": "textarea",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -66,10 +66,10 @@
                         "id": ""
                     },
                     "default_value": "",
-                    "tabs": "all",
-                    "toolbar": "basic",
-                    "media_upload": 0,
-                    "delay": 0
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": 3,
+                    "new_lines": "wpautop"
                 },
                 {
                     "key": "field_6241c773a307a",
@@ -151,7 +151,7 @@
                     "key": "field_6241bfc51d66c",
                     "label": "Description",
                     "name": "description",
-                    "type": "wysiwyg",
+                    "type": "textarea",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -161,10 +161,10 @@
                         "id": ""
                     },
                     "default_value": "",
-                    "tabs": "all",
-                    "toolbar": "basic",
-                    "media_upload": 0,
-                    "delay": 0
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": 3,
+                    "new_lines": "wpautop"
                 }
             ]
         },
@@ -222,7 +222,7 @@
                     "key": "field_6241bfe21d671",
                     "label": "Description",
                     "name": "description",
-                    "type": "wysiwyg",
+                    "type": "textarea",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -232,10 +232,10 @@
                         "id": ""
                     },
                     "default_value": "",
-                    "tabs": "all",
-                    "toolbar": "basic",
-                    "media_upload": 0,
-                    "delay": 0
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": 3,
+                    "new_lines": "wpautop"
                 },
                 {
                     "key": "field_6241c63e59ee7",
@@ -317,7 +317,7 @@
                     "key": "field_6241c2ff1d689",
                     "label": "Description",
                     "name": "description",
-                    "type": "wysiwyg",
+                    "type": "textarea",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -327,10 +327,10 @@
                         "id": ""
                     },
                     "default_value": "",
-                    "tabs": "all",
-                    "toolbar": "basic",
-                    "media_upload": 0,
-                    "delay": 0
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": 3,
+                    "new_lines": "wpautop"
                 }
             ]
         },
@@ -416,7 +416,7 @@
                     "key": "field_6241c0511d678",
                     "label": "Description",
                     "name": "description",
-                    "type": "wysiwyg",
+                    "type": "textarea",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -426,10 +426,10 @@
                         "id": ""
                     },
                     "default_value": "",
-                    "tabs": "all",
-                    "toolbar": "basic",
-                    "media_upload": 0,
-                    "delay": 0
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": 4,
+                    "new_lines": "wpautop"
                 }
             ]
         },
@@ -504,7 +504,7 @@
                     "key": "field_6241c8375e04f",
                     "label": "Description",
                     "name": "description",
-                    "type": "wysiwyg",
+                    "type": "textarea",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -514,10 +514,10 @@
                         "id": ""
                     },
                     "default_value": "",
-                    "tabs": "all",
-                    "toolbar": "basic",
-                    "media_upload": 0,
-                    "delay": 0
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": 4,
+                    "new_lines": "wpautop"
                 },
                 {
                     "key": "field_6241c8b4d2eb2",
@@ -630,7 +630,7 @@
                     "key": "field_6241c927d2ebe",
                     "label": "Description",
                     "name": "description",
-                    "type": "wysiwyg",
+                    "type": "textarea",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -640,10 +640,10 @@
                         "id": ""
                     },
                     "default_value": "",
-                    "tabs": "all",
-                    "toolbar": "basic",
-                    "media_upload": 0,
-                    "delay": 0
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": 4,
+                    "new_lines": "wpautop"
                 },
                 {
                     "key": "field_6241ca03ed6b2",
@@ -1001,7 +1001,7 @@
                     "key": "field_6241c0ef1d681",
                     "label": "Subtitle",
                     "name": "subtitle",
-                    "type": "textarea",
+                    "type": "wysiwyg",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -1011,10 +1011,10 @@
                         "id": ""
                     },
                     "default_value": "",
-                    "placeholder": "",
-                    "maxlength": "",
-                    "rows": 2,
-                    "new_lines": "br"
+                    "tabs": "all",
+                    "toolbar": "basic",
+                    "media_upload": 0,
+                    "delay": 0
                 },
                 {
                     "key": "field_6241c0fb1d682",
@@ -1058,5 +1058,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1648581188
+    "modified": 1648592486
 }

@@ -310,6 +310,7 @@
                     <?= do_shortcode($subscription_s['form_shortcode']) ?>
                 </div>
             <?php endif; ?>
+            <img src="<?php echo get_bloginfo('template_url') ?>/images/IC_favicon.png" alt="IC-icon">
         </section>
     <?php endif; ?>
 
@@ -322,7 +323,7 @@
             <?php endif; ?>
 
             <?php if( $contact_s['title'] ): ?>
-                <h2 class="subtitle"><?= $contact_s['title'] ?></h2>
+                <h2 class="subtitle"><?= $contact_s['subtitle'] ?></h2>
             <?php endif; ?>
 
             <?php if( $contact_s['form_shortcode'] ): ?>
