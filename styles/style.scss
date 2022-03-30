@@ -142,34 +142,33 @@ $color1: #c8353e;
 }
 
 @mixin text_1 {
-  @include font-light();
-  font-size: 16px;
+  @include font-book();
+  font-size: 18px;
   line-height: 1.3em;
 
   @media #{$laptop-s} {
-    font-size: 18px;
+    // font-size: 18px;
   }
 
   @media #{$desktop-s} {
     //font-size: 22px;
-    font-size: 1.11vw;
+    // font-size: 1.11vw;
   }
 }
 
 @mixin text_2 {
-  @include font-light();
-  font-size: 16px;
+  @include font-book();
+  font-size: 18px;
   line-height: 1.3em;
 
   @media #{$desktop-s} {
     //font-size: 20px;
-    font-size: 1.11vw;
+    // font-size: 1.11vw;
   }
 }
 
 @mixin small-text {
   @include font-regular();
-  color: #000d2d;
   font-size: 14px;
 
   @media #{$desktop-l} {
@@ -200,6 +199,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  color: #000d2d;
 
   * {
     font-weight: normal;
@@ -259,12 +259,12 @@ body {
       min-height: 40px;
       border: none;
       @include font-regular();
-      font-size: 1.2vw;
       text-transform: uppercase;
       letter-spacing: 0.1em;
       cursor: pointer;
       padding: 0 17px;
       box-sizing: border-box;
+      font-size: 18px !important;
 
       @media #{$laptop-s} {
         padding: 0 0.85vw;
