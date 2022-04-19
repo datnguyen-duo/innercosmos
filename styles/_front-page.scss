@@ -536,6 +536,10 @@
           max-width: 83.22vw;
           margin: 16.81vw auto 20.6vw;
 
+          @media screen and (max-width: 1250px) {
+            margin: 16.81vw auto 30.6vw;
+          }
+
           display: none;
           position: relative;
 
