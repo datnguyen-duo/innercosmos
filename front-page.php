@@ -118,7 +118,7 @@
                 $members_s_1['members_1'] ||
                 $members_s_1['members_2']
         ): ?>
-        <section class="members-section founders-section">
+        <section class="members-section founders-section" id="interview">
             <!--Desktop members-->
             <div class="desktop-members">
                 <div class="col left-col">
@@ -138,6 +138,16 @@
                     <?php if( $members_s_1['description'] ): ?>
                         <div class="description"><?= $members_s_1['description'] ?></div>
                     <?php endif; ?>
+
+                    <img class="radio-logo" src="<?= get_template_directory_uri() ?>/images/Bloomberg Radio.png" alt="interview-logo">
+
+                    <audio controls>
+                        <source src="<?= get_template_directory_uri() ?>/images/Meron Gribetz 040622.mp3" type="audio/mp3">
+                        Your browser does not support the audio element.
+                    </audio> 
+                    <p class="interview-description">Bloomberg Businessweek Radio Interview</p>
+                    <p class="interview-description">Inner Cosmos Founder and CEO Meron Gribetz sits down with Bloomberg Businessweek's Carol Massar Bloomberg Quicktake's Tim Stenovec.</p>
+                    <p class="interview-description">© 2022 Bloomberg L.P. All rights reserved. Used with permission.</p>
                 </div>
 
                 <div class="col right-col">
@@ -162,6 +172,15 @@
                     <div class="description"><?= $members_s_1['description'] ?></div>
                 <?php endif; ?>
 
+                <img class="radio-logo" src="<?= get_template_directory_uri() ?>/images/Bloomberg Radio.png" alt="interview-logo">
+
+                <audio controls>
+                    <source src="<?= get_template_directory_uri() ?>/images/Meron Gribetz 040622.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio> 
+                <p class="interview-description">Bloomberg Businessweek Radio Interview</p>
+                <p class="interview-description">Inner Cosmos Founder and CEO Meron Gribetz sits down with Bloomberg Businessweek's Carol Massar Bloomberg Quicktake's Tim Stenovec.</p>
+                <p class="interview-description">© 2022 Bloomberg L.P. All rights reserved. Used with permission.</p>
                 <?php if( $members_s_1['members_1'] || $members_s_1['members_2'] ): ?>
                     <div class="members">
                         <?php if( $members_s_1['members_1'] ):
