@@ -556,6 +556,20 @@ body {
   display: none;
 }
 
+#mc-embedded-subscribe,
+#mc-embedded-subscribe-popup {
+  margin: 1em auto;
+  display: block;
+}
+
+#mce-responses {
+  font-family: "halyard-display", sans-serif;
+}
+
+.init {
+  display: block !important;
+}
+
 @import "reset";
 @import "select2";
 @import "header";

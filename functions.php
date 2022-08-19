@@ -38,7 +38,7 @@ function site_scripts() {
     wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js', array(), null, true);
 
     wp_enqueue_script('select-2', get_theme_file_uri('/js/select2.js'), NULL, '1', true);
-    wp_enqueue_script('global', get_theme_file_uri('/js/global.js'), NULL, '1', true);
+    wp_enqueue_script('global', get_theme_file_uri('/js/global.min.js'), NULL, '1', true);
 
     wp_localize_script('global','site_data',array(
         'site_url' => site_url(),
