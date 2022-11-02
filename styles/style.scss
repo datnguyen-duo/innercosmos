@@ -132,12 +132,12 @@ $color1: #c8353e;
   }
 
   @media #{$laptop-s} {
-    font-size: 1.1vw;
+    font-size: 0.93vw;
   }
 
   @media #{$desktop-s} {
     //font-size: 18px;
-    font-size: 0.93vw;
+    font-size: 0.7077vw;
   }
 }
 
@@ -574,4 +574,5 @@ body {
 @import "select2";
 @import "header";
 @import "front-page";
+@import "news";
 @import "footer";

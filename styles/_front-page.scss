@@ -808,75 +808,75 @@
       }
     }
   }
+}
 
-  .subscription-form-section {
-    background-color: #f5a67e;
-    padding: 70px 20px 100px;
+.subscription-form-section {
+  background-color: #f5a67e;
+  padding: 70px 20px 100px;
 
-    @media #{$laptop-s} {
-      padding: 9.44vw 20px 11.71vw;
+  @media #{$laptop-s} {
+    padding: 9.44vw 20px 11.71vw;
+  }
+
+  .title {
+    @include title-2();
+    text-align: center;
+  }
+
+  .form-holder {
+    margin-top: 40px;
+
+    @media #{$tablet-s} {
+      margin: 4.29vw auto 0;
+      max-width: 30vw;
     }
 
-    .title {
-      @include title-2();
-      text-align: center;
-    }
-
-    .form-holder {
-      margin-top: 40px;
-
-      @media #{$tablet-s} {
-        margin: 4.29vw auto 0;
-        max-width: 30vw;
-      }
-
-      @media #{$tablet-l} {
-        max-width: 30vw;
-      }
-    }
-
-    > img {
-      display: block;
-      margin: 1em auto 0;
+    @media #{$tablet-l} {
+      max-width: 30vw;
     }
   }
 
-  .contact-form-section {
-    background-color: #b4b8c7;
-    padding: 70px 20px 100px;
+  > img {
+    display: block;
+    margin: 1em auto 0;
+  }
+}
 
-    @media #{$laptop-s} {
-      padding: 9.19vw 20px;
+.contact-form-section {
+  background-color: #b4b8c7;
+  padding: 70px 20px 100px;
+
+  @media #{$laptop-s} {
+    padding: 9.19vw 20px;
+  }
+
+  .title {
+    @include title-2();
+    text-align: center;
+    margin-bottom: 25px;
+
+    @media #{$tablet-s} {
+      margin: 0 auto 58px auto;
+      max-width: 47vw;
     }
+  }
 
-    .title {
-      @include title-2();
-      text-align: center;
-      margin-bottom: 25px;
-
-      @media #{$tablet-s} {
-        margin: 0 auto 58px auto;
-        max-width: 47vw;
-      }
+  .subtitle {
+    @include subtitle();
+    text-align: center;
+    margin-top: 2em;
+    a {
+      color: inherit;
+      text-decoration: underline;
     }
+  }
 
-    .subtitle {
-      @include subtitle();
-      text-align: center;
-      margin-top: 2em;
-      a {
-        color: inherit;
-        text-decoration: underline;
-      }
-    }
+  .form-holder {
+    margin-top: 40px;
 
-    .form-holder {
-      margin-top: 40px;
-
-      @media #{$tablet-s} {
-        margin: 7.07vw auto 0;
-        max-width: 63.63vw;
-      }
+    @media #{$tablet-s} {
+      margin: 7.07vw auto 0;
+      max-width: 63.63vw;
     }
   }
 }

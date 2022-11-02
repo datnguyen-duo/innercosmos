@@ -1,0 +1,109 @@
+.news-page-container {
+  .hero-section {
+    overflow: hidden;
+    background-color: #ffe8b9;
+    position: relative;
+    padding: 10vw 20px 8vw;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #000d2d;
+    .title {
+      @include title-0();
+      //margin-bottom: 80px;
+      margin-bottom: 8vw;
+      color: #000d2d;
+
+      @media #{$mobile-l} {
+        margin-bottom: 6vw;
+      }
+    }
+    p {
+      @include title_3();
+      max-width: 100%;
+
+      @media #{$tablet-s} {
+        max-width: 35vw;
+      }
+    }
+  }
+
+  .posts {
+    padding: 8vw 7vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 6vw 0;
+    @media #{$tablet-s} {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 3vw 2vw;
+    }
+
+    &__item {
+      box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      &--thumbnail {
+        display: flex;
+        align-items: center;
+        position: relative;
+        height: 54vw;
+        flex-shrink: 0;
+
+        @media #{$tablet-s} {
+          height: 18vw;
+        }
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        audio {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          bottom: 0;
+          z-index: 1;
+        }
+      }
+      &--content {
+        padding: 4vw 3vw 3vw;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        @media #{$tablet-s} {
+          padding: 2vw 1.5vw 1.5vw;
+        }
+        color: #000d2d;
+        h3 {
+          @include font-book();
+          font-size: 18px;
+          line-height: 1.3em;
+          margin-bottom: 20px;
+
+          @media #{$laptop-s} {
+            font-size: 1.3vw;
+          }
+        }
+
+        p {
+          @include text_2();
+          margin-bottom: 2em;
+        }
+
+        span {
+          @include subtitle();
+          color: #f5a67e;
+        }
+        .row {
+          display: flex;
+          width: 100%;
+          justify-content: space-between;
+          margin-top: auto;
+        }
+      }
+    }
+  }
+}
