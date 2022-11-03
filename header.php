@@ -13,10 +13,11 @@
     <div id="page" class="site">
 
         <header>
-            <img class="mobile" src="<?= get_template_directory_uri() ?>/images/mobile-header.png" alt="">
-            <img class="tablet" src="<?=get_template_directory_uri() ?>/images/tablet-header.png" alt="">
-            <img class="desktop" src="<?= get_template_directory_uri() ?>/images/header.png" alt="">
-            <a href="<?= site_url() ?>/#" class="logo"></a>
+            <img class="mobile" src="<?= get_template_directory_uri() ?>/images/mobile-header__v2.png" alt="">
+            <img class="tablet" src="<?=get_template_directory_uri() ?>/images/tablet-header__v2.png" alt="">
+            <img class="desktop" src="<?= get_template_directory_uri() ?>/images/header__v2.png" alt="">
+            <a href="<?= site_url() ?>/" class="logo"></a>
+            <a href="<?= site_url() ?>/news-press/" class="press"></a>
             <div class="popup-button"></div>
         </header>
 
