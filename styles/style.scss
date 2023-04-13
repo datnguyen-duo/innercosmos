@@ -1,8 +1,8 @@
 /*!
 Theme Name: Inner Cosmos
 Theme URI: NA
-Author: NA
-Author URI: NA
+Author: Duo Studio
+Author URI: https://duo-studio.co
 Description: NA
 Version: 1.0.0
 */
@@ -194,6 +194,9 @@ $color1: #c8353e;
   overflow: hidden;
 }
 
+* {
+  box-sizing: border-box;
+}
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -573,5 +576,6 @@ body {
 @import "select2";
 @import "header";
 @import "front-page";
+@import "single";
 @import "news";
 @import "footer";

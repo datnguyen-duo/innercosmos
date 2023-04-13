@@ -1,57 +1,73 @@
-<?php get_header(); 
+<?php get_header(); ?>
 
-$home_ID = get_option('page_on_front');
-
-?>
-
-<div class="news-page-container">
-    <section class="hero-section">
-        <h1 class="title"><?php echo get_the_title( get_option('page_for_posts', true) ); ?></h1>
-        <p><?php echo get_post_field( 'post_content', get_option('page_for_posts') ); ?></p>
+<div class="post">
+    <section class="post__banner">
+        <?php the_title('<h1>', '</h1>'); ?>
+        <div class="row">
+            <div class="col"><p><?php the_category(', '); ?></p></div>
+            <div class="col"><p><?php echo get_the_date(); ?></p></div>
+        </div>
     </section>
-        <?php 
-        $args = array(
-            'post_type'=> 'post',
-            'orderby'    => 'date',
-            'post_status' => 'publish',
-            'order'    => 'DESC',
-            'posts_per_page' => -1  
-            );
-            $result = new WP_Query( $args );
-            if ( $result-> have_posts() ) : ?>
-                <section class="posts">
-                    <?php while ( $result->have_posts() ) : $result->the_post(); $file = get_field('file', get_the_id()); ?>
-                        <a href="<?php the_permalink(); ?>" class="posts__item">
-                            <div class="posts__item--thumbnail">
-                                <?php if ($file): 
-                                    if ($file['type'] == 'audio') : ?>
-                                        <audio controls>
-                                            <source src="<?php echo $file['url']?>" type="audio/mp3">
-                                            Your browser does not support the audio element.
-                                        </audio> 
-                                    <?php endif;?>
 
-                                <?php endif; ?>
-                                <?php echo wp_get_attachment_image( get_post_thumbnail_id(), "medium", "", array( "class" => "posts__item--thumbnail" ) );  ?>
+    <section class="post__content">
+        <div class="post__content--thumbnail">
+            <?php echo wp_get_attachment_image( get_post_thumbnail_id(), "full", "", "" );  ?>
+        </div>
+
+        <h2 class="post__content--excerpt">
+            <?php echo get_the_excerpt(); ?>
+        </h2>
+
+        <div class="post__content--wrap">
+            <?php while( have_posts() ): the_post(); 
+                the_content(); 
+            endwhile; ?>
+        </div>
+    </section>
+
+    <?php $related = get_posts( 
+        array( 
+            'category__in' => wp_get_post_categories($post->ID), 
+            'numberposts' => 3, 
+            'post__not_in' => array($post->ID) ) );
+        if( $related ): ?>
+
+        <section class="post__related">
+            <h1>Related Resources</h1>
+            <div class="posts">
+                <?php foreach( $related as $post ): $file = get_field('file', get_the_id()) ?>
+                    <a href="<?php the_permalink(); ?>" class="posts__item">
+                        <div class="posts__item--thumbnail">
+                            <?php if ($file): 
+                                if ($file['type'] == 'audio') : ?>
+                                    <audio controls>
+                                        <source src="<?php echo $file['url']?>" type="audio/mp3">
+                                        Your browser does not support the audio element.
+                                    </audio> 
+                                <?php endif;?>
+
+                            <?php endif; ?>
+                            <?php echo wp_get_attachment_image( get_post_thumbnail_id(), "medium", "", array( "class" => "posts__item--thumbnail" ) );  ?>
+                        </div>
+                        <div class="posts__item--content">
+                            <?php the_title("<h3>", "</h3>"); ?>
+                            <div class="row">
+                                <span><?php foreach((get_the_category()) as $category) {
+                                        echo $category->cat_name . ' ';
+                                    }    
+                                ?></span>
+                                <span><?php echo get_the_date(); ?></span>
                             </div>
-                            <div class="posts__item--content">
-                                <?php the_title("<h3>", "</h3>"); ?>
-                                <p><?php echo get_the_excerpt(); ?></p>
-                                <div class="row">
-                                    <span><?php foreach((get_the_category()) as $category) {
-                                            echo $category->cat_name . ' ';
-                                        }    
-                                    ?></span>
-                                    <span><?php echo get_the_date(); ?></span>
-                                </div>
-                            </div>
-                        </a>
-                    <?php endwhile; ?>
-                </section>
+                        </div>
+                    </a>
+                <?php endforeach; ?>
+            </div>
+        </section>
+
         <?php endif; wp_reset_postdata(); ?>
-
-        <?php
-    $subscription_s = get_field('subscription_section', $home_ID);
+</div>
+<?php
+    $subscription_s = get_field('subscription_section', get_option('page_on_front'));
     if( $subscription_s['title'] || $subscription_s['form_shortcode']  ): ?>
         <section class="subscription-form-section">
             <?php if( $subscription_s['title'] ): ?>
@@ -95,7 +111,7 @@ $home_ID = get_option('page_on_front');
     <?php endif; ?>
 
     <?php
-    $contact_s = get_field('contact_section', $home_ID);
+    $contact_s = get_field('contact_section', get_option('page_on_front'));
     if( $contact_s['title'] || $contact_s['form_shortcode']  ): ?>
         <section class="contact-form-section">
             <?php if( $contact_s['title'] ): ?>
@@ -113,6 +129,5 @@ $home_ID = get_option('page_on_front');
             <?php endif; ?>
         </section>
     <?php endif; ?>
-</div>
 
-<?php get_footer();?> 
+<?php get_footer();
